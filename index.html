@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html, body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        div {
+            flex: 1;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="addColorButton">Click Me to Add a Color!</button>
+    </div>
+    <script>
+        // Function to add a color div to the body
+        function addColor() {
+
+            const color = prompt("Enter a color (e.g., 'red', 'blue', '#00ff00'):");
+
+
+            const newDiv = document.createElement("div");
+
+
+            newDiv.style.backgroundColor = color;
+
+            // Append the new div to the body
+            document.body.appendChild(newDiv);
+        }
+
+        // Attach the addColor function to the button's click event
+        const addButton = document.getElementById("addColorButton");
+        addButton.addEventListener("click", addColor);
+    </script>
+</body>
+</html>
